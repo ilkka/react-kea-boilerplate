@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import { getContext, resetContext } from "kea";
 import { Provider } from "react-redux";
-import { App } from "./App";
+import App from "./App";
 
 resetContext({
   createStore: {},
