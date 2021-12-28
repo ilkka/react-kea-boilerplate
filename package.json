@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src --ext .ts,.tsx",
+    "typegen": "kea-typegen write ./src",
     "prepare": "husky install"
   },
   "keywords": [],
@@ -28,6 +29,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.28.0",
     "husky": "^7.0.4",
+    "kea-typegen": "^1.4.2",
     "lint-staged": "^12.1.4",
     "prettier": "^2.5.1",
     "style-loader": "^3.3.1",
