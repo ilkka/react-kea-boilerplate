@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/index.tsx",
   "scripts": {
+    "start": "webpack serve --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src --ext .ts,.tsx",
     "typegen": "kea-typegen write ./src",
