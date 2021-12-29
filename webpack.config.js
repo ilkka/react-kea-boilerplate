@@ -1,5 +1,4 @@
 const path = require("path");
-const webpack = require("webpack");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 module.exports = {
@@ -28,10 +27,15 @@ module.exports = {
     filename: "bundle.js",
   },
   devServer: {
-    contentBase: path.join(__dirname, "public/"),
+    hot: "only",
     port: 3000,
-    publicPath: "http://localhost:3000/dist/",
-    hotOnly: true,
+    devMiddleware: {
+      publicPath: "http://localhost:3000/dist/",
+    },
+    static: {
+      directory: path.join(__dirname, "public/"),
+      watch: true,
+    },
   },
   plugins: [new ReactRefreshWebpackPlugin()],
   devtool: "eval-source-map",
