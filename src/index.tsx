@@ -1,3 +1,4 @@
+import React from 'react'
 import ReactDOM from "react-dom";
 import { getContext, resetContext } from "kea";
 import { Provider } from "react-redux";
