@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from "react-dom";
-import { getContext, resetContext } from "kea";
-import { Provider } from "react-redux";
+import { resetContext, Provider } from "kea";
 import App from "./App";
 
 resetContext({
@@ -10,6 +9,6 @@ resetContext({
 })
 
 ReactDOM.render(
-  <Provider store={getContext().store}><App /></Provider>,
+  <Provider><App /></Provider>,
   document.getElementById('root')
 )
